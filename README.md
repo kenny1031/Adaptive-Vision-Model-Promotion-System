@@ -1,1 +1,2 @@
 # Adaptive-Vision-Model-Promotion-System
+This project builds a computer vision system for content safety classification. Instead of retraining and deploying every new model blindly, the system detects performance degradation on incoming data, fine-tunes a challenger model, evaluates it against the current champion, and promotes it only when it passes reliability and deployment gates.

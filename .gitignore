@@ -1,0 +1,100 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Type checker / linter caches
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# -----------------------------
+# Environment / secrets
+# -----------------------------
+.env
+.env.*
+*.env
+
+# -----------------------------
+# OS files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# IDE / editor
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# Project data
+# -----------------------------
+data/
+!data/.gitkeep
+
+# If you want to keep metadata CSVs in git later,
+# replace the above with more selective rules instead.
+
+# FiftyOne cache
+fiftyone/
+data/fiftyone/
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Model checkpoints / artifacts
+checkpoints/
+artifacts/
+outputs/
+runs/
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.joblib
+*.pkl
+
+# Generated reports / figures
+reports/
+figures/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# -----------------------------
+# Temporary files
+# -----------------------------
+tmp/
+temp/
+.cache/
