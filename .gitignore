@@ -58,7 +58,7 @@ Thumbs.db
 # -----------------------------
 # Project data
 # -----------------------------
-data/
+data/*
 !data/.gitkeep
 
 # If you want to keep metadata CSVs in git later,
