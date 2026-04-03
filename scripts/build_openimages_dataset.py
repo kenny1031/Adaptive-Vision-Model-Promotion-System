@@ -14,16 +14,39 @@ DEFAULT_CLASS_MAP = {
         "Cat",
         "Dog",
         "Book",
-        "Laptop",
-        "Bicycle"
     ],
     "unsafe": [
+        # --- Tier 1: weapons/exploding objects---
         "Knife",
+        "Kitchen knife",
+        "Dagger",
+        "Sword",
         "Axe",
-        "Hammer",
-        "Fire",
-        "Smoke"
-    ],
+        "Handgun",
+        "Rifle",
+        "Shotgun",
+        "Bomb",
+        "Weapon",
+
+        # --- Tier 2: strictly dangerous objects ---
+        "Chainsaw",
+        "Drill (Tool)",
+        "Scissors",
+        "Screwdriver",
+        "Wrench",
+        "Chisel",
+        "Paper cutter",
+        "Pizza cutter",
+
+        # --- Tier 3: High risk objects ---
+        "Bow and arrow",
+        "Cannon",
+        "Missile",
+        "Rocket",
+        "Skull",
+        "Syringe",
+        "Torch",
+    ]
 }
 
 
@@ -162,7 +185,7 @@ def build_dataset(
 
     ensure_dir(original_root)
     ensure_dir(remapped_root / "safe")
-    ensure_dir(remapped_root / "suspicious")
+    #ensure_dir(remapped_root / "suspicious")
     ensure_dir(remapped_root / "unsafe")
     ensure_dir(metadata_root)
 
@@ -196,10 +219,10 @@ def build_dataset(
                     "positive_labels": "|".join(sorted(positive_labels)),
                     "negative_labels": "|".join(sorted(negative_labels)),
                     "num_positive_labels": len(positive_labels),
-                    "matched_positive_labels": "|".join(sorted(matched_original)),
+                    "matched_original_labels": "|".join(sorted(matched_original)),
                     "remapped_label": "",
                     "status": "skipped_conflict",
-                    "exported_positive_path": "",
+                    "exported_original_path": "",
                     "exported_remapped_path": "",
                 })
             else:
